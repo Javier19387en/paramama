@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Día de las Madres</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome para los iconos -->
+  <style>
+     body {
+      font-family: Platino;
+      background-image: url('IMG/mpños.jpg');
+      background-size: cover; /* Ajustar la imagen de fondo para que cubra toda la página */
+      background-position: center; /* Centrar la imagen de fondo */
+      align-items: center; /* Centrar verticalmente el contenido */
+      padding-top: 20px;
+    }
+    .container {
+      text-align: center;
+    }
+    .btn {
+      background-color: #f3bbe9; /* Color de fondo del botón */
+      color: #7a406f; /* Color del texto del botón */
+      border-color: #f3bbe9; /* Color del borde del botón */
+      margin-top: 20px;
+    }
+    .btn:hover {
+      background-color: #ed86db; /* Color de fondo del botón al pasar el ratón */
+      border-color: #f3bbe9; /* Color del borde del botón al pasar el ratón */
+    }
+    .card {
+      display: none; /* Oculta la carta inicialmente */
+      margin-top: 20px;
+      /*background-color: #ffc0cb; /* Color rosa para la carta */
+      padding: 20px;
+      background-image: url('IMG/rosa.jpg'); /* Borde con forma de raíces */
+    }
+    .card-img-top {
+      width: 50%; /* Ancho de la imagen */
+      display: block; /* Mostrar la imagen como un bloque */
+      margin: 0 auto; /* Centrar la imagen horizontalmente */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+</div>
+
+<div class="container" id="contentToHide">
+  <!-- Contenido que se ocultará cuando se muestre la carta -->
+  <h1>Feliz Día de las Madres</h1>
+  <p>En este día especial, celebremos el amor y la dedicación de todas las madres alrededor del mundo.</p>
+  <button class="btn btn-lg" id="showCardButton">Ver Carta</button>
+</div>
+
+<div class="card container" id="cardContent">
+  <div class="card-body">
+    <button type="button" class="close" aria-label="Close" onclick="closeCard()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h2 class="card-title">Feliz Día de las Madres</h2>
+    <p class="card-text">Querida mamá,</p>
+    <p class="card-text">En este día tan especial, quiero expresarte todo mi amor y gratitud por ser la mejor mamá del mundo. Gracias por tu amor incondicional, tu apoyo constante y por ser mi mejor amiga. Te quiero más de lo que las palabras pueden expresar. ¡Feliz Día de las Madres!</p>
+  </div>
+</div>
+
+<script>
+  document.getElementById("showCardButton").addEventListener("click", function() {
+    document.getElementById("contentToHide").style.display = "none";
+    document.getElementById("cardContent").style.display = "block";
+  });
+
+  function closeCard() {
+    document.getElementById("contentToHide").style.display = "block";
+    document.getElementById("cardContent").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
